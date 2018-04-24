@@ -1,5 +1,7 @@
+const done = require('./done');
+
 const pwd = () =>  {
-  process.stdout.write(process.cwd());
+  done(process.cwd());
 };
 
 module.exports = pwd;

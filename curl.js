@@ -1,12 +1,11 @@
 const request = require('request');
+const done = require('./done');
 
 const curl = (uri) => {
   console.log(uri);
   request(uri, (err, response, body) => {
     if (err) throw err;
-    process.stdout.write(JSON.stringify(response));
-    process.stdout.write(body);
-    process.stdout.write('\nprompt >');
+    done(body)
   });
 };
 
